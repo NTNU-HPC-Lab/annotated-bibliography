@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[backend = biber,
+            bibstyle = reading,
+            entrykey = true, % Show entry key. Set to `false` before publishing
+            ]{biblatex}
+\addbibresource{references.bib}
+\usepackage[colorlinks]{hyperref}
+
+\def\bibabstractprefix{./abstracts/}
+\def\bibannotationprefix{./annotations/}
+
+\DeclareFieldFormat{annotation}{\textbf{Annotations:}~#1}
+\DeclareFieldFormat{abstract}{\textbf{Abstract:}~#1}
+
+\begin{document}
+\nocite{*}
+\printbibliography
+\end{document}
